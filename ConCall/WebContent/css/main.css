@@ -1,0 +1,52 @@
+body{
+		/*background:url(img/bg-content2.png);*/
+		padding-top:70px;
+		font-family: "微軟正黑體","Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+		background-color:#E0C860;
+		background-image:url(../img/bg5.png);
+		background-size: 100%;
+	}
+	h2{
+		font-family: "微軟正黑體","Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+		padding:0 0 0 10px;
+	}
+	.header{
+		padding:0px 15% 0px 15%;
+		/*background-color:#e2b9f4;*/
+	}
+	.content{
+		overflow:hidden;
+	}
+	.leftsection{
+		float:left;
+		width:120px;
+		height:800px;
+	}
+	.rightsection{
+		float:right;
+		width:120px;
+		height:800px;
+	}
+	.navbar-minestyle{
+		height:110px;
+		background-image:url(../img/banner.png);
+		background-color:#E7EDC6;
+		-moz-background-size:100%;
+		-webkit-background-size:100%;
+		-o-background-size:100%;
+		background-size:100%;
+		padding-top:0px;
+		margin-left:100px;
+		margin-right:100px;
+		font-size:18px;
+		/*background-color:#e2b9f4;*/
+		color: #FFF;
+		z-index:2;
+		moz-box-shadow: 1px 1px 5px #555; /* Firefox */
+		-webkit-box-shadow: 1px 1px 5px #555; /* Safari 和 Chrome */
+		box-shadow: 1px 1px 5px #555; /* Opera 10.5 + */
+		/*filter:alpha(opacity=80);*/
+		-moz-opacity:0.8;
+		-khtml-opacity:0.8; 
+		opacity:0.8;
+	}

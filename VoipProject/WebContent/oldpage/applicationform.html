@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>單位管理者表單</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="//code.jquery.com/jquery.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- main css -->
+<link href="css/main.css" rel="stylesheet">
+
+<style type="text/css">
+	.section1{
+		margin:50px 120px;
+		height:600px;
+		background-color:white;
+		border: 1px solid #CCC;
+		moz-box-shadow: 1px 1px 2px 2px #DDD; /* Firefox */
+		-webkit-box-shadow: 1px 1px 2px 2px #DDD; /* Safari 和 Chrome */
+		box-shadow: 1px 1px 2px 2px #DDD; /* Opera 10.5 + */
+	}
+	.sec1_text{
+		width:100%;
+		height:600px;
+		margin:0px auto;
+		padding:10px 35% 0 35%;
+	}
+	.sec1_text p {
+		font: 16px "微軟正黑體","Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+		padding:10px 0 0 10px;
+	}
+	.sec1_text div{
+		width:300px;
+		padding:10px 0 0 0;
+	}
+</style>
+
+<script type="text/javascript">
+function check(thisForm){
+	if(thisForm.depart.value == ""){
+		alert("請輸入單位名稱");
+		thisForm.depart.focus();
+		return false;
+	}
+	if(thisForm.email.value == ""){
+		alert("請輸入管理者帳號");
+		thisForm.email.focus();
+		return false;
+	}
+	//if(thisForm.inputPassword.value == ""){
+	//	alert("請輸入密碼");
+	//	thisForm.inputPassword.focus();
+	//	return false;
+	//}
+	//if(thisForm.checkPassword.value != thisForm.inputPassword.value){
+	//	alert("您輸入的密碼不一致，請重新輸入");
+	//	thisForm.checkPassword.focus();
+	//	return false;
+	//}
+	if(thisForm.name.value == ""){
+		alert("請輸入管理者姓名");
+		thisForm.name.focus();
+		return false;
+	}
+	if(thisForm.phone.value == ""){
+		alert("請輸入分機號碼");
+		thisForm.phone.focus();
+		return false;
+	}
+	
+}
+</script>
+
+</head>
+<body>
+	<div class="header">
+	<nav class="navbar navbar-minestyle navbar-fixed-top" role="navigation">
+  		<!-- Brand and toggle get grouped for better mobile display -->
+  		<div class="navbar-header">
+    		<a class="navbar-brand" href="home.html"><img src="img/6talk_logo.png"></a>
+    	</div>
+    	<div id="content">
+        	
+    	</div>
+	</nav>
+	</div>
+	<div class="content">
+		<div class="leftsection">
+			
+		</div>
+		<div class="rightsection">
+			
+		</div>
+		<div class="section1">
+			<div class="sec1_text">
+				<h2><span class="label label-success">單位管理者申請表單</span></h2>
+				<form class="bs-docs-example form-horizontal" method="post" onsubmit="return check(this)" action="web.html">
+            		 <div class="input-group-sm">
+              			單位名稱:&nbsp;
+                		<input type="text" class="form-control input-lg" id="depart" name="depart" placeholder="請輸入單位名稱">
+            		</div>
+            		<div class="input-group-sm">
+              			分機號碼:&nbsp;
+                		<input type="text" class="form-control input-lg" maxlength="8" onkeyup="value=value.replace(/[^-_A-Z0-9]/g,'')" id="phone" name="phone" placeholder="請輸入930+分機號碼">
+            		</div>
+            		<div class="input-group-sm">
+              			電子郵件:&nbsp;
+                		<input type="text" class="form-control input-lg" id="email" name="email" placeholder="請輸入電子郵件信箱">
+            		</div>
+            		<!-- <div class="input-group input-group-lg">
+              			密碼:&nbsp;              
+                		<input type="password" class="form-control input-lg" id="inputPassword" name="inputPassword" placeholder="請輸入密碼">
+            		</div>
+            		<div class="input-group input-group-lg">
+              			請再輸入一次密碼:&nbsp;              
+                		<input type="password" class="form-control input-lg" id="checkPassword" name="checkPassword" placeholder="請輸入密碼">
+            		</div>
+            		 -->
+            		<div class="input-group-sm">
+              			管理者姓名:&nbsp;
+                		<input type="text" class="form-control input-lg" id="name" name="name" placeholder="請輸入姓名">
+            		</div>
+            		<div class="control-group">
+                		<button type="submit" class="btn btn-primary">送出</button>
+                		<a href="Home.jsp" class="btn btn-default" >取消</a>
+           			</div>
+           			<input type="hidden" name="action" value="register">
+          		</form>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
